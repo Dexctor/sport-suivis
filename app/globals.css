@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #0A0A0A;
+  color: #EDEDED;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+button { font-family: inherit; }
+input, select, textarea { font-family: inherit; }
+
+/* Mono font reserved for numbers and tags */
+.rt-mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+
+/* Color tokens */
+:root {
+  --bg: #0A0A0A;
+  --bg-1: #121212;
+  --bg-2: #181818;
+  --border: #262626;
+  --border-hi: #383838;
+  --text: #F0F0F0;
+  --muted: #8B8B8B;
+  --muted-2: #5A5A5A;
+  --accent: #FF453A;
+  --accent-hi: #FF6B61;
+  --accent-soft: rgba(255, 69, 58, 0.12);
+  --success: #4ADE80;
+  --success-soft: rgba(74, 222, 128, 0.12);
+  --warning: #FBBF24;
+  --warning-soft: rgba(251, 191, 36, 0.12);
+  --info: #60A5FA;
+}
+
+/* Common surfaces */
+.rt-panel { background: var(--bg-1); border: 1px solid var(--border); border-radius: 8px; }
+.rt-panel-elevated { background: var(--bg-2); border: 1px solid var(--border-hi); border-radius: 10px; }
+
+/* Text colors */
+.rt-accent { color: var(--accent); }
+.rt-success { color: var(--success); }
+.rt-warning { color: var(--warning); }
+.rt-info { color: var(--info); }
+.rt-muted { color: var(--muted); }
+
+/* Backgrounds */
+.rt-bg-accent { background: var(--accent); color: #000; }
+.rt-bg-success { background: var(--success); color: #000; }
+
+/* Typography utility */
+.rt-mono-num {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+/* Section labels (used to be // COMMENT, now real labels) */
+.rt-section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* Tab style */
+.rt-tab {
+  background: var(--bg-1);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+  cursor: pointer;
+  font-weight: 600;
+  min-height: 44px;
+}
+.rt-tab:hover { color: var(--text); border-color: var(--border-hi); }
+.rt-tab.active {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+  font-weight: 700;
+}
+
+/* Buttons */
+.rt-btn {
+  background: var(--bg-2);
+  color: var(--text);
+  border: 1px solid var(--border-hi);
+  cursor: pointer;
+  transition: background 0.12s ease, border-color 0.12s ease, transform 0.08s ease;
+  border-radius: 6px;
+  font-weight: 600;
+  min-height: 40px;
+}
+.rt-btn:hover { background: #222; border-color: #4A4A4A; }
+.rt-btn:active { transform: scale(0.98); }
+.rt-btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+
+.rt-btn-primary {
+  background: var(--accent);
+  color: #000;
+  border: 1px solid var(--accent);
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.12s ease, transform 0.08s ease;
+  border-radius: 6px;
+  min-height: 40px;
+}
+.rt-btn-primary:hover { background: var(--accent-hi); }
+.rt-btn-primary:active { transform: scale(0.98); }
+.rt-btn-primary:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+
+.rt-btn-success {
+  background: var(--success);
+  color: #000;
+  border: 1px solid var(--success);
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 6px;
+  min-height: 40px;
+}
+.rt-btn-success:hover { background: #5EE992; }
+
+.rt-btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: color 0.12s ease, border-color 0.12s ease;
+  border-radius: 6px;
+  font-weight: 600;
+  min-height: 40px;
+}
+.rt-btn-ghost:hover { color: var(--text); border-color: var(--border-hi); }
+
+/* Inputs */
+.rt-input {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  outline: none;
+  transition: border 0.15s ease;
+  border-radius: 6px;
+  font-size: 15px;
+}
+.rt-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+
+/* Animations */
+.rt-pulse { animation: rt-pulse 2s ease-in-out infinite; }
+@keyframes rt-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+.rt-progress-track {
+  height: 6px;
+  background: var(--bg-2);
+  overflow: hidden;
+  border-radius: 999px;
+}
+.rt-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hi));
+  transition: width 0.5s ease;
+  border-radius: 999px;
+}
+
+.rt-grain {
+  position: fixed; inset: 0; pointer-events: none; opacity: 0.018; z-index: 1;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='0.85'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+.rt-link-btn {
+  background: transparent; border: none; color: var(--muted);
+  cursor: pointer; font-family: inherit; font-size: 12px; padding: 4px 0;
+  border-radius: 4px;
+}
+.rt-link-btn:hover { color: var(--accent); }
+
+.rt-rest-ring { transform: rotate(-90deg); transform-origin: center; }
+
+.rt-bg-fade-in { animation: rt-fadeIn 0.3s ease; }
+@keyframes rt-fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.rt-slide-up { animation: rt-slideUp 0.4s cubic-bezier(0.2, 0.9, 0.3, 1); }
+@keyframes rt-slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Mobile-first responsive */
+@media (max-width: 640px) {
+  body { font-size: 15px; }
+
+  .rt-mobile-stack {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .rt-mobile-full { width: 100% !important; }
+
+  .rt-tab {
+    min-height: 48px;
+    padding: 12px 16px !important;
+  }
+
+  .rt-btn, .rt-btn-primary, .rt-btn-success, .rt-btn-ghost {
+    min-height: 48px;
+  }
+
+  .rt-input {
+    min-height: 48px;
+    font-size: 16px; /* iOS prevents auto-zoom at >= 16px */
+  }
+}
+
+/* Scrollbars on horizontal tab strip */
+.rt-tab-strip {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.rt-tab-strip::-webkit-scrollbar { display: none; }
