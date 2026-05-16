@@ -50,18 +50,16 @@ export const PROGRAM = {
   },
   sessions: [
     {
-      id: 'push', name: 'PUSH', day: 'LUN', focus: 'PECS / ÉPAULES / TRICEPS', duration: 65,
+      id: 'push', name: 'PUSH', day: 'LUN', focus: 'PECS / ÉPAULES / TRICEPS', duration: 55,
       exercises: [
         { id: 'pecdeck-uni-push', name: 'Pec-deck UNILATÉRAL (lourd)', sets: 4, reps: '8-12', rest: 120, type: 'compound',
-          tip: '★★ EXO PRINCIPAL PECS. Un bras à la fois → amplitude maximale, focus mind-muscle x10. Charge lourde mais technique parfaite. Contraction franche au centre (3s pause), excentrique contrôlé 3s. Ressens ÉCRASER le pec.' },
+          tip: '★★ PEC-DECK EN PREMIER QUAND RETARD PECS. Un bras à la fois → amplitude maximale, focus mind-muscle x10. Charge lourde mais technique parfaite. Contraction franche au centre (3s pause), excentrique contrôlé 3s. Ressens ÉCRASER le pec.' },
         { id: 'dc-push', name: 'Développé couché machine convergente', sets: 4, reps: '8-10', rest: 150, type: 'compound',
-          tip: '★ Seule presse de la séance. Machine convergente IDÉALE pour ton épaule (trajectoire guidée + bras qui se rapprochent en haut = + de pec). Coudes à ~45° du buste, pas écartés. Descente 2-3s, pas de rebond.' },
+          tip: '★ Seule presse de la séance, en 2ème. Machine convergente IDÉALE pour ton épaule (trajectoire guidée + bras qui se rapprochent en haut = + de pec). Coudes à ~45° du buste, pas écartés. Descente 2-3s, pas de rebond.' },
         { id: 'pecdeck-bi-push', name: 'Pec-deck BILATÉRAL (finisher pump)', sets: 3, reps: '15-20', rest: 75, type: 'isolation',
           tip: '★ ON SE BOUSILLE DESSUS. Charge modérée → brûlure maximale. Tempo lent partout (2s/2s/2s). Cherche le pump et la congestion. Pause 1s en contraction. Tu dois sortir avec les pecs en feu.' },
-        { id: 'cable-cross-push', name: 'Écartés poulie vis-à-vis (bas vers haut)', sets: 3, reps: '12-15', rest: 75, type: 'isolation',
-          tip: '★ Mouvement de circularité — tu vas SENTIR le pec à fond. Poulies basses, mouvement de bas vers le haut (hug a tree inversé). Croise légèrement les mains en haut pour contraction max. Évite la position basse extrême (labrum).' },
         { id: 'lat-push', name: 'Élévations latérales haltères', sets: 4, reps: '12-15', rest: 60, type: 'isolation',
-          tip: '★ Pour la largeur d\'épaule (effet "carré") + santé articulaire. NE PAS dépasser l\'horizontale (conflit sous-acromial). Légère flexion du coude, pouces légèrement vers le haut. Tempo 1s/2s.' },
+          tip: '★ Suffisant pour la santé d\'épaule + la largeur (effet "carré"). NE PAS dépasser l\'horizontale (conflit sous-acromial). Légère flexion du coude, pouces légèrement vers le haut. Tempo 1s/2s.' },
         { id: 'tri-push', name: 'Extensions triceps poulie haute (corde)', sets: 3, reps: '12', rest: 60, type: 'isolation',
           tip: 'Coudes COLLÉS au corps, étirement complet en haut, écarter la corde en bas. Pause 1s en contraction.' },
         { id: 'dip-push', name: 'Extensions triceps barre EZ couché', sets: 3, reps: '10-12', rest: 60, type: 'isolation',
