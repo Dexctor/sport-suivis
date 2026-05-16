@@ -50,18 +50,16 @@ export const PROGRAM = {
   },
   sessions: [
     {
-      id: 'push', name: 'PUSH', day: 'LUN', focus: 'PECS / ÉPAULES / TRICEPS', duration: 70,
+      id: 'push', name: 'PUSH', day: 'LUN', focus: 'PECS / ÉPAULES / TRICEPS', duration: 65,
       exercises: [
         { id: 'pecdeck-uni-push', name: 'Pec-deck UNILATÉRAL (lourd)', sets: 4, reps: '8-12', rest: 120, type: 'compound',
           tip: '★★ EXO PRINCIPAL PECS. Un bras à la fois → amplitude maximale, focus mind-muscle x10. Charge lourde mais technique parfaite. Contraction franche au centre (3s pause), excentrique contrôlé 3s. Ressens ÉCRASER le pec.' },
         { id: 'dc-push', name: 'Développé couché machine convergente', sets: 4, reps: '8-10', rest: 150, type: 'compound',
-          tip: '★ Machine convergente IDÉALE pour ton épaule (trajectoire guidée + bras qui se rapprochent en haut = + de pec). Sinon Smith ou Hammer Strength. Évite barre libre si l\'épaule chauffe. Coudes à ~45° du buste.' },
-        { id: 'dvi-push', name: 'Développé incliné machine ou haltères neutre', sets: 3, reps: '10-12', rest: 120, type: 'compound',
-          tip: 'Cible le faisceau claviculaire (haut du pec) — partie souvent négligée. Machine convergente inclinée OU haltères paumes face à face (banc 30°). Coudes restent légèrement en avant du buste.' },
+          tip: '★ Seule presse de la séance. Machine convergente IDÉALE pour ton épaule (trajectoire guidée + bras qui se rapprochent en haut = + de pec). Coudes à ~45° du buste, pas écartés. Descente 2-3s, pas de rebond.' },
         { id: 'pecdeck-bi-push', name: 'Pec-deck BILATÉRAL (finisher pump)', sets: 3, reps: '15-20', rest: 75, type: 'isolation',
           tip: '★ ON SE BOUSILLE DESSUS. Charge modérée → brûlure maximale. Tempo lent partout (2s/2s/2s). Cherche le pump et la congestion. Pause 1s en contraction. Tu dois sortir avec les pecs en feu.' },
-        { id: 'dep-push', name: 'Développé épaules ASSIS machine', sets: 4, reps: '10-12', rest: 120, type: 'compound',
-          tip: '⚠ JAMAIS barre derrière la nuque. Machine assise avec dossier (Hammer Strength ou similaire). Prise neutre si dispo. Ne descend pas en dessous de l\'oreille → pré-pince labrum.' },
+        { id: 'cable-cross-push', name: 'Écartés poulie vis-à-vis (bas vers haut)', sets: 3, reps: '12-15', rest: 75, type: 'isolation',
+          tip: '★ Mouvement de circularité — tu vas SENTIR le pec à fond. Poulies basses, mouvement de bas vers le haut (hug a tree inversé). Croise légèrement les mains en haut pour contraction max. Évite la position basse extrême (labrum).' },
         { id: 'lat-push', name: 'Élévations latérales haltères', sets: 4, reps: '12-15', rest: 60, type: 'isolation',
           tip: '★ Pour la largeur d\'épaule (effet "carré") + santé articulaire. NE PAS dépasser l\'horizontale (conflit sous-acromial). Légère flexion du coude, pouces légèrement vers le haut. Tempo 1s/2s.' },
         { id: 'tri-push', name: 'Extensions triceps poulie haute (corde)', sets: 3, reps: '12', rest: 60, type: 'isolation',
@@ -113,12 +111,12 @@ export const PROGRAM = {
       ],
     },
     {
-      id: 'upper', name: 'UPPER PUMP', day: 'VEN', focus: 'RAPPEL HAUT / BRAS / DELTS', duration: 55,
+      id: 'upper', name: 'UPPER PUMP', day: 'VEN', focus: 'RAPPEL HAUT / BRAS / DELTS', duration: 50,
       exercises: [
         { id: 'pecdeck-upper', name: 'Pec-deck UNILATÉRAL (finisher pecs)', sets: 4, reps: '12-15', rest: 75, type: 'isolation',
           tip: '★ Second rappel pecs de la semaine. Unilatéral pour amplitude max et focus. Charge modérée, tempo lent (3s descente, 1s contraction). Sur la dernière série : drop set (-30% puis échec).' },
-        { id: 'pec-upper', name: 'Développé incliné machine', sets: 3, reps: '12-15', rest: 90, type: 'compound',
-          tip: 'Séance focus pump : charges plus légères, plus de reps, repos plus courts. Machine pour sécuriser l\'épaule. Inclinaison 30°, contraction au sommet 1s.' },
+        { id: 'cable-upper', name: 'Écartés poulie vis-à-vis (haut vers bas)', sets: 3, reps: '12-15', rest: 75, type: 'isolation',
+          tip: '★ Variation : poulies HAUTES, mouvement de haut vers le bas (cible le bas du pec). Croise légèrement les mains. Pump et stretch maximum, pas de charge max.' },
         { id: 'row-upper', name: 'Rowing machine pectorale soutenue', sets: 3, reps: '12-15', rest: 90, type: 'compound',
           tip: 'Chest-supported, prise neutre. Cherche la brûlure, pas la charge max. Scapulas en fin de mouvement.' },
         { id: 'face-upper', name: 'Face pull poulie (rappel)', sets: 3, reps: '15-20', rest: 60, type: 'isolation',
